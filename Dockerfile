@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:jessie-slim
 
 MAINTAINER cbk@freifunk-hennef.de
 
