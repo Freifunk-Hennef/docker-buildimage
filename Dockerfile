@@ -10,3 +10,8 @@ RUN mkdir /tmp/hcloud && \
     curl -o /tmp/hcloud/hcloud.tgz -L https://github.com/hetznercloud/cli/releases/download/v1.12.0/hcloud-linux-amd64-v1.12.0.tar.gz && \
     cd /tmp/hcloud && tar xfz /tmp/hcloud/hcloud.tgz --strip-components 1 && mv bin/hcloud /usr/local/bin && rm -rf /tmp/hcloud
 
+RUN ln -s /usr/bin/ccache /usr/local/bin/gcc && \
+    ln -s /usr/bin/ccache /usr/local/bin/g++ && \
+    ln -s /usr/bin/ccache /usr/local/bin/cc && \
+    ln -s /usr/bin/ccache /usr/local/bin/c++
+
